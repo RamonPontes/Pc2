@@ -36,10 +36,18 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="tNumero2" min="-2" pref="101" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="bSoma" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="bSoma" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="bSubtrai" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="bDivide" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="bMultiplica" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <Component id="lResultado" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="163" max="32767" attributes="0"/>
+              <EmptySpace pref="70" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -57,7 +65,12 @@
                   <Component id="jLabel2" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="bSoma" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="bSoma" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="bSubtrai" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="bDivide" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="bMultiplica" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="lResultado" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="189" max="32767" attributes="0"/>
@@ -95,6 +108,30 @@
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lResultado">
+    </Component>
+    <Component class="javax.swing.JButton" name="bSubtrai">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Subtrai"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bSubtraiActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="bDivide">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Dividi"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bDivideActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="bMultiplica">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Multiplica"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bMultiplicaActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

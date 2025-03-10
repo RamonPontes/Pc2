@@ -34,6 +34,9 @@ public class TelaCalculadora extends javax.swing.JFrame {
         tNumero2 = new javax.swing.JTextField();
         bSoma = new javax.swing.JButton();
         lResultado = new javax.swing.JLabel();
+        bSubtrai = new javax.swing.JButton();
+        bDivide = new javax.swing.JButton();
+        bMultiplica = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -60,6 +63,27 @@ public class TelaCalculadora extends javax.swing.JFrame {
             }
         });
 
+        bSubtrai.setText("Subtrai");
+        bSubtrai.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bSubtraiActionPerformed(evt);
+            }
+        });
+
+        bDivide.setText("Dividi");
+        bDivide.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bDivideActionPerformed(evt);
+            }
+        });
+
+        bMultiplica.setText("Multiplica");
+        bMultiplica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bMultiplicaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -75,9 +99,16 @@ public class TelaCalculadora extends javax.swing.JFrame {
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(tNumero2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(bSoma)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(bSoma)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(bSubtrai)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(bDivide)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(bMultiplica))
                     .addComponent(lResultado))
-                .addContainerGap(163, Short.MAX_VALUE))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -91,7 +122,11 @@ public class TelaCalculadora extends javax.swing.JFrame {
                     .addComponent(tNumero2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(bSoma)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bSoma)
+                    .addComponent(bSubtrai)
+                    .addComponent(bDivide)
+                    .addComponent(bMultiplica))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lResultado)
                 .addContainerGap(189, Short.MAX_VALUE))
@@ -116,6 +151,33 @@ public class TelaCalculadora extends javax.swing.JFrame {
         
         lResultado.setText(Float.toString(calculadoa.getResultado()));
     }//GEN-LAST:event_bSomaActionPerformed
+
+    private void bSubtraiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSubtraiActionPerformed
+        calculadoa.setNumero1(Float.parseFloat(tNumero1.getText()));
+        calculadoa.setNumero2(Float.parseFloat(tNumero2.getText()));
+        
+        calculadoa.subtracao();
+        
+        lResultado.setText(Float.toString(calculadoa.getResultado()));
+    }//GEN-LAST:event_bSubtraiActionPerformed
+
+    private void bDivideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDivideActionPerformed
+        calculadoa.setNumero1(Float.parseFloat(tNumero1.getText()));
+        calculadoa.setNumero2(Float.parseFloat(tNumero2.getText()));
+        
+        calculadoa.divisao();
+        
+        lResultado.setText(Float.toString(calculadoa.getResultado()));
+    }//GEN-LAST:event_bDivideActionPerformed
+
+    private void bMultiplicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bMultiplicaActionPerformed
+        calculadoa.setNumero1(Float.parseFloat(tNumero1.getText()));
+        calculadoa.setNumero2(Float.parseFloat(tNumero2.getText()));
+        
+        calculadoa.multiplicacao();
+        
+        lResultado.setText(Float.toString(calculadoa.getResultado()));
+    }//GEN-LAST:event_bMultiplicaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -153,7 +215,10 @@ public class TelaCalculadora extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bDivide;
+    private javax.swing.JButton bMultiplica;
     private javax.swing.JButton bSoma;
+    private javax.swing.JButton bSubtrai;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lResultado;
