@@ -4,12 +4,37 @@
  */
 package tela;
 
+import vo.Pessoa;
+
 /**
  *
  * @author info2025
  */
 public class TelaPessoa extends javax.swing.JFrame {
-
+    
+    Pessoa pessoa = new Pessoa();
+    
+    private void limpaTela() {
+        tId.setText("");
+        tNome.setText("");
+        tCpf.setText("");
+        tIdade.setText("");
+    }
+    
+    private void telaToPessoa() {
+        pessoa.setId(Integer.parseInt(tId.getText()));
+        pessoa.setCpf(tCpf.getText());
+        pessoa.setIdade(Integer.parseInt(tIdade.getText()));
+        pessoa.setNome(tNome.getText());
+    }
+    
+    private void pessoaToTela() {
+        tId.setText(Integer.toString(pessoa.getId()));
+        tCpf.setText(pessoa.getCpf());
+        tNome.setText(pessoa.getNome());
+        tIdade.setText(Integer.toString(pessoa.getIdade()));
+    }
+    
     /**
      * Creates new form TelaPessoa
      */
@@ -34,6 +59,9 @@ public class TelaPessoa extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         tIdade = new javax.swing.JTextField();
+        bNovo = new javax.swing.JButton();
+        bLe = new javax.swing.JButton();
+        bSalva = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,6 +78,17 @@ public class TelaPessoa extends javax.swing.JFrame {
         jLabel3.setText("CPF");
 
         jLabel4.setText("Idade");
+
+        bNovo.setText("Novo");
+
+        bLe.setText("Lê");
+
+        bSalva.setText("Salva");
+        bSalva.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bSalvaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -73,8 +112,14 @@ public class TelaPessoa extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tIdade, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(260, Short.MAX_VALUE))
+                        .addComponent(tIdade, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(bNovo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(bSalva)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(bLe)))
+                .addContainerGap(154, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -95,7 +140,12 @@ public class TelaPessoa extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(tIdade, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(128, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bNovo)
+                    .addComponent(bSalva)
+                    .addComponent(bLe))
+                .addContainerGap(81, Short.MAX_VALUE))
         );
 
         pack();
@@ -104,6 +154,10 @@ public class TelaPessoa extends javax.swing.JFrame {
     private void tCpfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tCpfActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tCpfActionPerformed
+
+    private void bSalvaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSalvaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bSalvaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -141,6 +195,9 @@ public class TelaPessoa extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bLe;
+    private javax.swing.JButton bNovo;
+    private javax.swing.JButton bSalva;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

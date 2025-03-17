@@ -46,8 +46,15 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="tIdade" min="-2" pref="90" max="-2" attributes="0"/>
                   </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="bNovo" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="bSalva" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="bLe" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace pref="260" max="32767" attributes="0"/>
+              <EmptySpace pref="154" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -74,7 +81,13 @@
                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="tIdade" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="128" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="bNovo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="bSalva" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="bLe" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="81" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -110,6 +123,24 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="tIdade">
+    </Component>
+    <Component class="javax.swing.JButton" name="bNovo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Novo"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="bLe">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="L&#xea;"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="bSalva">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Salva"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bSalvaActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
