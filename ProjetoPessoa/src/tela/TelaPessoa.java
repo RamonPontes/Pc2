@@ -11,30 +11,30 @@ import vo.Pessoa;
  * @author info2025
  */
 public class TelaPessoa extends javax.swing.JFrame {
-    
+
     Pessoa pessoa = new Pessoa();
-    
+
     private void limpaTela() {
         tId.setText("");
         tNome.setText("");
         tCpf.setText("");
         tIdade.setText("");
     }
-    
+
     private void telaToPessoa() {
         pessoa.setId(Integer.parseInt(tId.getText()));
         pessoa.setCpf(tCpf.getText());
         pessoa.setIdade(Integer.parseInt(tIdade.getText()));
         pessoa.setNome(tNome.getText());
     }
-    
+
     private void pessoaToTela() {
         tId.setText(Integer.toString(pessoa.getId()));
         tCpf.setText(pessoa.getCpf());
         tNome.setText(pessoa.getNome());
         tIdade.setText(Integer.toString(pessoa.getIdade()));
     }
-    
+
     /**
      * Creates new form TelaPessoa
      */
@@ -166,7 +166,7 @@ public class TelaPessoa extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
